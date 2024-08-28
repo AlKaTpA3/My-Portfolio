@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Tiny5
+- Font Author: Copyright 2024 The tiny5 Project Authors (https://github.com/Gissio/font_tiny5)
+- Font Source: https://fonts.gstatic.com/s/tiny5/v1/KFOpCnmCvdGT7hw-z0hHAi88.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

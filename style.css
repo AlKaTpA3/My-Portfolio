@@ -1,0 +1,404 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Container */
+.container {
+    width: 85%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Photos/header.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+}
+
+/* Navigation */
+ ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+ ul li {
+    margin: 0 20px;
+}
+
+ ul li a {
+    color: #fff; /* Txt color */
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+ ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* Language Menu */
+.language-menu {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.selected-language {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.selected-language img {
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+}
+
+.language-menu:hover .selected-language {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.language-switcher {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 10px;
+}
+
+.language-switcher .language {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    color: #fff;   /* txt color */
+}
+
+.language-switcher .language:hover {
+    background-color: #555; 
+}
+
+.language-switcher a {
+    display: flex; 
+    align-items: center;
+    text-decoration: none; 
+    color: inherit; 
+    font-family: inherit; 
+    font-size: 16px; 
+    font-weight: normal; 
+}
+
+.language-switcher img {
+    width: 28px;
+    height: 28px;
+    margin-right: 8px; /* Расстояние между картинкой и текстом */
+    object-fit: cover;
+}
+
+.language-menu.open .language-switcher {
+    display: block;
+}
+
+
+/*avatar */
+#avatar {
+    float:inline-end;
+    max-width: 100%;
+}
+/* #avatar:hover{
+    -webkit-transform: rotate(15deg); 
+          transform: rotate(15deg); 
+} */
+.txtabout {
+    background-color: #edf0da88;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Sections */
+.section {
+    padding: 60px 0;
+    background-color: rgb(235, 204, 204);
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Gallery-Styles */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .gallery-item {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover img {
+    transform: scale(1.1);
+  }
+  
+  .gallery-item:focus-within img {
+    transform: scale(1.1);
+  }
+  
+  /* Стили для модального окна */
+  /* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+  }
+  
+  .modal.open {
+    display: flex;
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  
+  
+/* Contact Styles */
+.contact-icons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-icons a {
+    color: #333;
+    font-size: 30px;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.contact-icons a:hover {
+    color: #555;
+}
+li :hover{
+    background-color: rgba(245, 222, 179, 0.726);
+}
+
+/*Footer styles*/
+footer {
+    background-color: #222; 
+    color: #fff; 
+    text-align: center; 
+    padding: 20px; 
+    position: relative; 
+    bottom: 0; 
+    width: 100%; 
+    border-top: 1px solid #444; 
+}
+
+footer p {
+    margin: 10px 0; 
+}
+
+footer a {
+    color: #f4f4f4; 
+    text-decoration: none; 
+    margin: 0 15px; 
+    font-size: 16px; 
+    transition: color 0.3s ease, text-decoration 0.3s ease; 
+}
+
+footer a:hover {
+    color: #ff6347; 
+    text-decoration: underline; 
+}
+/* 
+.
+.
+.
+.
+. */
+/* Media query */
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .language-menu {
+        top: 10px;
+        right: 10px;
+    }
+}
+/* Для мобильных устройств (до 480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 20px 0;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .language-menu {
+        top: 10px;
+        right: 10px;
+    }
+
+    .gallery-item {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+/* Для планшетов (от 481px до 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    header {
+        padding: 25px 0;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    .language-menu {
+        top: 20px;
+        right: 20px;
+    }
+
+    .gallery-item {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Для экрана от 769px до 1024px (планшеты в альбомной ориентации и небольшие десктопы) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+
+    header {
+        padding: 30px 0;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav ul li {
+        margin: 0 20px;
+    }
+
+    .language-menu {
+        top: 20px;
+        right: 30px;
+    }
+
+    .gallery-item {
+        width: 50%;
+    }
+}
+
+
